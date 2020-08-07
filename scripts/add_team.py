@@ -11,17 +11,18 @@ from django.utils import timezone
 back = os.path.dirname
 BASE_DIR = back(back(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
-
+img_root = 'images/'
 
 def add_one_team(name):
-    Team.objects.create(name=name)
+    team = Team(name=name, logo=os.path.join(img_root + name+'.png'))
+    team.save()
 
 def add_many_teams(*names):
     for name in names:
         add_one_team(name)
 
 def add_lpl_teams():
-    teams = ['IG', 'TOP', 'FPX', 'JDG', 'LGD', 'RNG', 'EDG', 'WE',
+    teams = ['IG', 'TES', 'FPX', 'JDG', 'LGD', 'RNG', 'EDG', 'WE',
             'LNG', 'SN', 'ES', 'BLG', 'DMO', 'RW', 'V5', 'VG', 'OMG']
     add_many_teams(*teams)
 
