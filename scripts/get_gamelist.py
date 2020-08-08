@@ -18,7 +18,7 @@ def add_one_record(winner_name, loser_name, winner_score=2, loser_score=0):
         print('record exists!')
         return
     Record.objects.create(winner=winner, loser=loser, winner_score=winner_score, loser_score=loser_score)
-    print(winner_name, winner_score, ':', loser_score, winner_name)
+    print(winner_name, winner_score, ':', loser_score, loser_name)
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lpl_site.settings")
