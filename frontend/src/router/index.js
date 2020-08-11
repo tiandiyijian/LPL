@@ -12,7 +12,10 @@ const routes = [
   {
     path: "/home",
     name: "/ome",
-    component: Home
+    component: Home,
+    meta: {
+      title: 'LPL'
+    }
   }
 ];
 

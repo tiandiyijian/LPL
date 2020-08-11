@@ -82,4 +82,7 @@ export default {
   margin-left 10%
 img
   width 25px
+  vertical-align middle
+span
+  vertical-align middle
 </style>
