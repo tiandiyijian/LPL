@@ -1,7 +1,7 @@
 from rest_framework import status, viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import Team, Record
 from .serializers import TeamSerializer, RecordSerializer
@@ -21,7 +21,7 @@ class RecordViewSet(viewsets.ModelViewSet):
 
 @api_view(['GET'])
 def team_detail(request, name):
-    team = Team.objects.get(name=name)
+    team = get_object_or_404(Team, name=name)
 
     victory_record = Record.objects.filter(winner=team)
     victory_data = [{'winner': r.winner.name, 'loser': r.loser.name,

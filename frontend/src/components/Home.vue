@@ -69,7 +69,6 @@ export default {
         })
     },
     parseImg (team) {
-      // console.log(scope);
       return "/api/media/images/" + team + ".png";
     }
   }
