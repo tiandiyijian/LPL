@@ -1,0 +1,1 @@
+一个使用 Vue.js 和 Django 构造的查询 LPL 2020夏季赛常规赛战绩的网站，详细介绍见[博客](http://tiandiyijian.top/2020/08/14/lpl-record/)。

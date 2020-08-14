@@ -1,0 +1,4 @@
+selenium==3.141.0
+Django==3.0
+beautifulsoup4==4.9.1
+djangorestframework==3.11.1
